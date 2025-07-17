@@ -1,9 +1,9 @@
 use crate::{config::conf_utils::backup_clean, traits::TomlStore, types::AnyResult};
 
 use super::{
+    ConfigLifecycle,
     conf_utils::{import_from_toml, save_toml_config},
     traits::{ConfError, ConfResult},
-    ConfigLifecycle,
 };
 
 impl<T> TomlStore for T
