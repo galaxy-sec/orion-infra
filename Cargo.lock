@@ -333,7 +333,7 @@ dependencies = [
 
 [[package]]
 name = "orion_infra"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = [
  "anyhow",
  "derive_more",
