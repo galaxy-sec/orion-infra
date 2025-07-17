@@ -1,0 +1,82 @@
+[Job]
+name = "flow"
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-19T07:10:46.620797Z"
+stdout = "[510] no val: mkdir -p __NO[ENV_RUN]__"
+
+[Job.tasks.result.Ok]
+running_time = 21
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-19T07:10:46.620875Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 3421749
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-19T07:10:50.042828Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 5099
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-19T07:10:50.047946Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 5429
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-19T07:10:50.053632Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 4027
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-19T07:10:50.05767Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 4172
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-19T07:10:50.061852Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 4318
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-19T07:10:50.06618Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 6820
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-19T07:10:50.073015Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 7597
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-19T07:10:50.080635Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 12097

@@ -1,0 +1,39 @@
+[Job]
+name = "flow"
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-19T02:33:26.785867Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 216166
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-19T02:33:27.002058Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 2480594
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-19T02:33:29.482664Z"
+stdout = """
+[510] cmd err : 101,    Checking orion-syspec v0.7.4 (/Users/zuowenjian/devspace/galaxy/orion-syspec)
+error: this expression creates a reference which is immediately dereferenced by the compiler
+   --> src/module/target.rs:303:58
+    |
+303 |                 OriginDict::from(ValueDict::from_valconf(&value_paths.user_value_file())?);
+    |                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: change this to: `value_paths.user_value_file()`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow
+    = note: `-D clippy::needless-borrow` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(clippy::needless_borrow)]`
+
+error: could not compile `orion-syspec` (lib) due to 1 previous error
+"""
+
+[Job.tasks.result.Ok]
+running_time = 1138004

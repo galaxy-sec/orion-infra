@@ -1,0 +1,41 @@
+[Job]
+name = "flow"
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-17T10:23:26.906407Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 173262
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-17T10:23:27.079693Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 2533723
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-17T10:23:29.613437Z"
+stdout = """
+[510] cmd err : 101,    Checking orion_common v0.4.1 (/Users/zuowenjian/devspace/galaxy/orion-syspec/crates/orion_common)
+    Checking orion_infra v0.1.0 (/Users/zuowenjian/devspace/galaxy/orion-syspec/crates/orion_infra)
+    Checking orion-syspec v0.7.3 (/Users/zuowenjian/devspace/galaxy/orion-syspec)
+error: this expression creates a reference which is immediately dereferenced by the compiler
+  --> src/module/depend.rs:70:53
+   |
+70 |                 dep.update(&self.dep_root().path(), &options).await?;
+   |                                                     ^^^^^^^^ help: change this to: `options`
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow
+   = note: `-D clippy::needless-borrow` implied by `-D warnings`
+   = help: to override `-D warnings` add `#[allow(clippy::needless_borrow)]`
+
+error: could not compile `orion-syspec` (lib) due to 1 previous error
+"""
+
+[Job.tasks.result.Ok]
+running_time = 1307730

@@ -1,0 +1,50 @@
+[Job]
+name = "flow"
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-16T07:55:31.337853Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 161173
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-16T07:55:31.499038Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 2354921
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-16T07:55:33.853976Z"
+stdout = """
+[510] cmd err : 101,warning: /Users/zuowenjian/devspace/galaxy/orion-syspec/Cargo.toml: unused manifest key: workspace.package.name
+    Checking orion-syspec v0.7.0 (/Users/zuowenjian/devspace/galaxy/orion-syspec)
+error: this expression creates a reference which is immediately dereferenced by the compiler
+  --> src/module/proj.rs:96:28
+   |
+96 |         mod_init_gitignore(&self.root_local())?;
+   |                            ^^^^^^^^^^^^^^^^^^ help: change this to: `self.root_local()`
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow
+   = note: `-D clippy::needless-borrow` implied by `-D warnings`
+   = help: to override `-D warnings` add `#[allow(clippy::needless_borrow)]`
+
+error: writing `&PathBuf` instead of `&Path` involves a new object where a slice will do
+   --> src/module/proj.rs:145:31
+    |
+145 |     pub fn make_new(prj_path: &PathBuf, name: &str) -> SpecResult<Self> {
+    |                               ^^^^^^^^ help: change this to: `&Path`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#ptr_arg
+    = note: `-D clippy::ptr-arg` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(clippy::ptr_arg)]`
+
+error: could not compile `orion-syspec` (lib) due to 2 previous errors
+"""
+
+[Job.tasks.result.Ok]
+running_time = 1144573

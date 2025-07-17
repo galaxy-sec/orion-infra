@@ -1,0 +1,96 @@
+[Job]
+name = "flow"
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-15T07:31:17.709399Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 5367
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-15T07:31:17.714856Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 3345205
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-15T07:31:21.060251Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 3846
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-15T07:31:21.064105Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 3207
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-15T07:31:21.067553Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 2974
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-15T07:31:21.070549Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 2978
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-15T07:31:21.073534Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 4979
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-15T07:31:21.07852Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 10115
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-15T07:31:21.088648Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 12067
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-15T07:31:21.100727Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 35193
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-15T07:31:21.136085Z"
+stdout = """
+[510] cmd err : 101,warning: /Users/zuowenjian/devspace/galaxy/orion-syspec/Cargo.toml: unused manifest key: workspace.package.name
+   Compiling orion-syspec v0.6.5 (/Users/zuowenjian/devspace/galaxy/orion-syspec)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.41s
+     Running unittests src/lib.rs (target/debug/deps/orion_syspec-a09808baff30d4fd)
+error: test failed, to rerun pass `-p orion-syspec --lib`
+"""
+
+[Job.tasks.result.Ok]
+running_time = 5003746

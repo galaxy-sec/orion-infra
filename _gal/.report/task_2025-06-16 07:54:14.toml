@@ -1,0 +1,98 @@
+[Job]
+name = "flow"
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-16T07:54:10.50985Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 175667
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-16T07:54:10.68554Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 2396952
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-16T07:54:13.082507Z"
+stdout = """
+[510] cmd err : 101,warning: /Users/zuowenjian/devspace/galaxy/orion-syspec/Cargo.toml: unused manifest key: workspace.package.name
+    Checking plist v1.7.2
+    Checking orion_common v0.4.1 (/Users/zuowenjian/devspace/galaxy/orion-syspec/crates/orion_common)
+    Checking orion_infra v0.1.0 (/Users/zuowenjian/devspace/galaxy/orion-syspec/crates/orion_infra)
+    Checking os_info v3.12.0
+    Checking orion-syspec v0.7.0 (/Users/zuowenjian/devspace/galaxy/orion-syspec)
+error: this expression creates a reference which is immediately dereferenced by the compiler
+  --> src/module/proj.rs:96:28
+   |
+96 |         mod_init_gitignore(&self.root_local())?;
+   |                            ^^^^^^^^^^^^^^^^^^ help: change this to: `self.root_local()`
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow
+   = note: `-D clippy::needless-borrow` implied by `-D warnings`
+   = help: to override `-D warnings` add `#[allow(clippy::needless_borrow)]`
+
+error: this expression creates a reference which is immediately dereferenced by the compiler
+   --> src/module/proj.rs:112:27
+    |
+112 |             .update_local(&self.root_local(), options)
+    |                           ^^^^^^^^^^^^^^^^^^ help: change this to: `self.root_local()`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow
+
+error: writing `&PathBuf` instead of `&Path` involves a new object where a slice will do
+   --> src/module/proj.rs:145:31
+    |
+145 |     pub fn make_new(prj_path: &PathBuf, name: &str) -> SpecResult<Self> {
+    |                               ^^^^^^^^ help: change this to: `&Path`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#ptr_arg
+    = note: `-D clippy::ptr-arg` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(clippy::ptr_arg)]`
+
+error: this expression creates a reference which is immediately dereferenced by the compiler
+  --> src/module/target.rs:77:33
+   |
+77 |         let subs = get_sub_dirs(&root)?;
+   |                                 ^^^^^ help: change this to: `root`
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow
+
+error: the borrowed expression implements the required traits
+   --> src/module/target.rs:161:31
+    |
+161 |         ctx.with_path("root", &target_root);
+    |                               ^^^^^^^^^^^^ help: change this to: `target_root`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrows_for_generic_args
+    = note: `-D clippy::needless-borrows-for-generic-args` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(clippy::needless_borrows_for_generic_args)]`
+
+error: writing `&PathBuf` instead of `&Path` involves a new object where a slice will do
+   --> src/system/proj.rs:148:31
+    |
+148 |     pub fn make_new(prj_path: &PathBuf, name: &str, repo: &str) -> SpecResult<Self> {
+    |                               ^^^^^^^^ help: change this to: `&Path`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#ptr_arg
+
+error: this loop could be written as a `for` loop
+   --> src/tools.rs:105:13
+    |
+105 |             while let Some(c) = chars.next() {
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try: `for c in chars.by_ref()`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#while_let_on_iterator
+    = note: `-D clippy::while-let-on-iterator` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(clippy::while_let_on_iterator)]`
+
+error: could not compile `orion-syspec` (lib) due to 7 previous errors
+"""
+
+[Job.tasks.result.Ok]
+running_time = 1614264

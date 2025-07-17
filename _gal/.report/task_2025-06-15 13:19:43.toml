@@ -1,0 +1,41 @@
+[Job]
+name = "flow"
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-15T13:19:40.831131Z"
+stdout = """
+[510] cmd err : 101,warning: /Users/zuowenjian/devspace/galaxy/orion-syspec/Cargo.toml: unused manifest key: workspace.package.name
+   Compiling orion-syspec v0.6.5 (/Users/zuowenjian/devspace/galaxy/orion-syspec)
+warning: unused imports: `MODULES_SPC_ROOT` and `make_mod_spec_4test`
+   --> src/module/target.rs:302:22
+    |
+302 |         const_vars::{MODULES_SPC_ROOT, TARGET_SPC_ROOT},
+    |                      ^^^^^^^^^^^^^^^^
+...
+307 |             spec::{ModuleSpec, make_mod_spec_4test, make_mod_spec_new},
+    |                                ^^^^^^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(unused_imports)]` on by default
+
+warning: `orion-syspec` (lib test) generated 1 warning (run `cargo fix --lib -p orion-syspec --tests` to apply 1 suggestion)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.07s
+     Running unittests src/lib.rs (target/debug/deps/orion_syspec-c17f581f5ce6820a)
+[2025-06-15T13:19:43Z INFO  spec/mod/target] save target  success!:./example/targets/x86-ubt22-k8s
+
+thread 'module::target::test::build_target_example' panicked at /Users/zuowenjian/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/orion-error-0.3.0/src/testcase.rs:20:33:
+[TEST ASSERTION FAILED] 
+ Error details: [104] res error << No such file or directory (os error 2)
+  -> Want: read sub dirs
+  -> Context stack:
+context 0: 
+target: read sub dirs 
+1. key: ./example/targets/x86-ubt22-k8s/src 
+
+
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+error: test failed, to rerun pass `--lib`
+"""
+
+[Job.tasks.result.Ok]
+running_time = 2613836

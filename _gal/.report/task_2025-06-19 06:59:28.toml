@@ -1,0 +1,235 @@
+[Job]
+name = "flow"
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-19T06:59:19.399472Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 5385
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-19T06:59:19.404959Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 2083563
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-19T06:59:21.488662Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 4237
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-19T06:59:21.492908Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 3439
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-19T06:59:21.49658Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 3328
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-19T06:59:21.499924Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 3357
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-19T06:59:21.50329Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 3995
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-19T06:59:21.507292Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 10995
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-19T06:59:21.518298Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 11279
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-19T06:59:21.529589Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 34594
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-19T06:59:21.564312Z"
+stdout = """
+
+running 100 tests
+test addr::git::tests::test_checkout_specific_branch ... ok
+test addr::git::tests::test_git_addr_pull_2 ... ok
+test addr::git::tests::test_git_addr_update_local ... ignored, need more time
+test addr::git::tests::test_git_addr_update_local_sub ... ok
+test addr::http::tests2::test_get_filename_with_empty_path ... ok
+test addr::http::tests2::test_get_filename_with_encoded_characters ... ok
+test addr::http::tests2::test_get_filename_with_fragment ... ok
+test addr::http::tests2::test_get_filename_with_invalid_url ... ok
+test addr::http::tests2::test_get_filename_with_multiple_path_segments ... ok
+test addr::http::tests2::test_get_filename_with_query_params ... ok
+test addr::http::tests2::test_get_filename_with_regular_url ... ok
+test addr::http::tests2::test_get_filename_with_trailing_slash ... ok
+test addr::http::tests::test_http_addr ... ignored, need more time
+test addr::http::tests::test_http_auth_download ... ok
+test addr::http::tests::test_http_upload_post ... ok
+test addr::http::tests::test_http_upload_put ... ok
+test addr::local::tests::test_local ... ok
+test addr::local::tests::test_rename_path_dir_new_target ... ok
+test addr::local::tests::test_rename_path_dir_overwrite_existing_dir ... ok
+test addr::local::tests::test_rename_path_file_new_target ... ok
+test addr::local::tests::test_rename_path_file_overwrite_existing_file ... ok
+test conf::tests::test_async_update ... ok
+test conf::tests::test_conf_file_creation ... ok
+test conf::tests::test_conf_spec_new ... ok
+test conf::tests::test_conf_with_addr_addr ... ok
+test conf::tests::test_conf_with_http_addr ... ok
+test module::depend::tests::test_depend ... ok
+test module::depend::tests::test_serialize_to_yaml ... ok
+test module::localize::tests::test_excluded_files ... ok
+test module::localize::tests::test_helm_nginx_rendering ... ok
+test module::localize::tests::test_render_directory ... ok
+test module::localize::tests::test_render_path_with_handlebars ... ok
+test module::proj::tests::test_mod_prj_example ... ok
+test module::proj::tests::test_mod_prj_new ... ok
+test module::setting::export::tests::test_setting_serialization ... ok
+test module::setting::path::tests::test_exclude_mut ... ok
+test module::setting::path::tests::test_is_exclude ... ok
+test module::setting::path::tests::test_is_include ... ok
+test module::setting::path::tests::test_new ... ok
+test module::setting::path::tests::test_wildcard_exclude ... ok
+test module::setting::path::tests::test_wildcard_include ... ok
+test module::target::test::build_target_host ... ok
+test module::target::test::build_target_k8s ... ok
+test module::target::test::test_build_used_value_merge_precedence ... ok
+test module::target::test::test_build_used_value_with_default_only ... ok
+test module::target::test::test_build_used_value_with_global_value ... ok
+test module::target::test::test_build_used_value_with_user_value ... ok
+test resource::tests::test_resource_node_creation ... ok
+test resource::tests::test_resource_node_save_load ... ok
+test software::tests::confspec_save_load ... ok
+test software::tests::software_save_load ... ok
+test software::tests::test_conf_spec_creation ... ok
+test system::proj::tests::test_mod_prj_new ... ok
+test system::proj::tests::test_sys_prj_example ... ok
+test system::spec::tests::build_example_sys_spec ... ok
+test tpl::comment::rust::tests::test_comment ... ok
+test tpl::comment::rust::tests::test_comment_in_string ... ok
+test tpl::comment::rust::tests::test_complex_mixed_case1 ... ok
+test tpl::comment::rust::tests::test_complex_mixed_case2 ... ok
+test tpl::comment::rust::tests::test_empty_string ... ok
+test tpl::comment::rust::tests::test_mixed_comments_and_code ... ok
+test tpl::comment::rust::tests::test_multi_line_comment ... ok
+test tpl::comment::rust::tests::test_only_code ... ok
+test tpl::comment::rust::tests::test_only_comments ... ok
+test tpl::comment::rust::tests::test_only_data ... ok
+test tpl::comment::rust::tests::test_only_raw_data ... ok
+test tpl::comment::yml::tests::test_case1 ... ok
+test tpl::comment::yml::tests::test_case2 ... ok
+test tpl::comment::yml::tests::test_case4 ... ok
+test tpl::comment::yml::tests::test_case5 ... ok
+test tpl::comment::yml::tests::test_case6 ... ok
+test tpl::comment::yml::tests::test_case7 ... ok
+test tpl::covert::tests::test_convert_code_only ... ok
+test tpl::covert::tests::test_convert_comment_only ... ok
+test tpl::covert::tests::test_convert_hash_comment ... ok
+test tpl::covert::tests::test_convert_mixed ... ok
+test vars::collection::tests::test_merge_vars ... ok
+test vars::collection::tests::test_toml_serialization ... ok
+test vars::constraint::tests::test_value_constraint_deserialization ... ok
+test vars::constraint::tests::test_value_constraint_serialization ... ok
+test vars::dict::tests::test_dict_toml_serialization ... ok
+test vars::env_eval::tests::test_basic_expansion ... ok
+test vars::env_eval::tests::test_consecutive_variables ... ok
+test vars::env_eval::tests::test_edge_cases ... ok
+test vars::env_eval::tests::test_empty_variable_name ... ok
+test vars::env_eval::tests::test_get_last_segment ... ok
+test vars::env_eval::tests::test_multiple_variables ... ok
+test vars::env_eval::tests::test_nested_braces ... ok
+test vars::env_eval::tests::test_special_characters ... ok
+test vars::env_eval::tests::test_unclosed_brace ... ok
+test vars::env_eval::tests::test_undefined_variable ... ok
+test vars::global::tests::test_find_project_define_in_current_dir ... ignored, change work dir
+test vars::global::tests::test_find_project_define_in_parent_dir ... ignored, change work dir
+test vars::global::tests::test_find_project_define_not_found ... ignored, change work dir
+test vars::types::tests::test_vartype_toml_deserialization ... ok
+test vars::types::tests::test_vartype_toml_serialization ... ok
+test vars::types::tests::vartype_display ... ok
+test workflow::act::tests::test_host_tpl_init ... ok
+test workflow::act::tests::test_k8s_tpl_init ... ok
+test workflow::act::tests::test_save_and_load_actions ... ok
+
+test result: ok. 95 passed; 0 failed; 5 ignored; 0 measured; 0 filtered out; finished in 2.90s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 4 tests
+test cond::tests::test_compare_ge ... ok
+test cond::tests::test_compare_we ... ok
+test cond::tests::test_eq_f64 ... ok
+test cond::tests::test_eq_u32 ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+"""
+
+[Job.tasks.result.Ok]
+running_time = 6844807

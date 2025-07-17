@@ -1,0 +1,73 @@
+[Job]
+name = "flow"
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-16T06:05:03.490233Z"
+stdout = """
+[510] cmd err : 101,warning: /Users/zuowenjian/devspace/galaxy/orion-syspec/Cargo.toml: unused manifest key: workspace.package.name
+   Compiling orion-syspec v0.7.0 (/Users/zuowenjian/devspace/galaxy/orion-syspec)
+warning: unused import: `derive_more::From`
+ --> src/workflow/prj.rs:4:5
+  |
+4 | use derive_more::From;
+  |     ^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `rename_path`
+  --> src/module/refs.rs:11:22
+   |
+11 |     addr::{AddrType, rename_path},
+   |                      ^^^^^^^^^^^
+
+warning: unused import: `ErrorConv`
+ --> src/vars/global.rs:7:19
+  |
+7 | use orion_error::{ErrorConv, ErrorOwe, ErrorWith};
+  |                   ^^^^^^^^^
+
+warning: `orion-syspec` (lib test) generated 3 warnings (run `cargo fix --lib -p orion-syspec --tests` to apply 3 suggestions)
+warning: associated function `change` is never used
+  --> src/vars/global.rs:66:12
+   |
+65 | impl WorkDir {
+   | ------------ associated function in this implementation
+66 |     pub fn change<S: Into<PathBuf>>(target_dir: S) -> std::io::Result<Self> {
+   |            ^^^^^^
+   |
+   = note: `#[warn(dead_code)]` on by default
+
+warning: `orion-syspec` (lib) generated 4 warnings (3 duplicates)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.99s
+     Running unittests src/lib.rs (target/debug/deps/orion_syspec-178206bb17637da7)
+[2025-06-16T06:05:04Z INFO  spec/mod/target] save target  success!:./example/modules/redis_mock/./mod/arm-mac14-host
+[2025-06-16T06:05:04Z INFO  spec/mod/target] save target  success!:./example/modules/redis_mock/./mod/x86-ubt22-k8s
+[2025-06-16T06:05:04Z INFO  spec/local/modprj] save modprj  to ./example/modules/redis_mock success!
+[2025-06-16T06:05:04Z INFO  spec/mod/target] save target  success!:./example/modules/mysql_mock/./mod/arm-mac14-host
+[2025-06-16T06:05:04Z INFO  spec/mod/target] save target  success!:./example/modules/mysql_mock/./mod/x86-ubt22-k8s
+[2025-06-16T06:05:04Z INFO  spec/local/modprj] save modprj  to ./example/modules/mysql_mock success!
+[2025-06-16T06:05:04Z INFO  spec/sys] load sys spec success!:./example/sys-model-spec/example-sys
+[2025-06-16T06:05:04Z INFO  spec/sys] load sys spec success!:./example/sys-model-spec/example-sys
+[2025-06-16T06:05:04Z INFO  spec/addr/local] update ./example/modules/redis_mock to ./example/sys-model-spec/example-sys/spec/mods/redis_mock success!
+[2025-06-16T06:05:04Z INFO  spec] rename ./example/sys-model-spec/example-sys/spec/mods/redis_mock to ./example/sys-model-spec/example-sys/spec/mods/__mod sucess!
+[2025-06-16T06:05:04Z DEBUG mod/ref] update target success!
+[2025-06-16T06:05:04Z INFO  spec/mod/target] load target  success!:./example/sys-model-spec/example-sys/spec/mods/redis_mock/arm-mac14-host
+[2025-06-16T06:05:04Z ERROR /mod/ref] update mod ref redis_mock fail!
+
+thread 'system::spec::tests::build_example_sys_spec' panicked at /Users/zuowenjian/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/orion-error-0.3.0/src/testcase.rs:31:33:
+[TEST ASSERTION FAILED] update 
+ Error details: [104] res error << No such file or directory (os error 2)
+  -> Want: read sub dirs
+  -> Context stack:
+context 0: 
+target: read sub dirs 
+1. key: ./example/sys-model-spec/example-sys/spec/mods/mod 
+
+
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+error: test failed, to rerun pass `--lib`
+"""
+
+[Job.tasks.result.Ok]
+running_time = 1060852

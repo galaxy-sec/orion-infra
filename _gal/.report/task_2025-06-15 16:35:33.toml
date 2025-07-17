@@ -1,0 +1,82 @@
+[Job]
+name = "flow"
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-15T16:35:31.84392Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 6124
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-15T16:35:31.85016Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 1979639
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-15T16:35:33.829954Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 4665
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-15T16:35:33.834632Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 3866
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-15T16:35:33.83871Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 3531
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-15T16:35:33.842253Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 3592
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-15T16:35:33.845853Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 4460
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-15T16:35:33.850322Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 10877
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-15T16:35:33.86121Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 13660
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-15T16:35:33.87489Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 33243

@@ -1,0 +1,59 @@
+[Job]
+name = "flow"
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-18T03:51:14.408902Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 169497
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-18T03:51:14.578428Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 2383473
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-18T03:51:16.961925Z"
+stdout = """
+[510] cmd err : 101,    Checking orion-syspec v0.7.3 (/Users/zuowenjian/devspace/galaxy/orion-syspec)
+error: this expression creates a reference which is immediately dereferenced by the compiler
+   --> src/module/target.rs:272:69
+    |
+272 |             let mut used = OriginDict::from(ValueDict::from_valconf(&global)?);
+    |                                                                     ^^^^^^^ help: change this to: `global`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow
+    = note: `-D clippy::needless-borrow` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(clippy::needless_borrow)]`
+
+error: this `impl` can be derived
+  --> src/update.rs:35:1
+   |
+35 | / impl Default for UpdateOptions {
+36 | |     fn default() -> Self {
+37 | |         Self {
+38 | |             scope_level: UpdateScope::default(),
+...  |
+41 | | }
+   | |_^
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#derivable_impls
+   = note: `-D clippy::derivable-impls` implied by `-D warnings`
+   = help: to override `-D warnings` add `#[allow(clippy::derivable_impls)]`
+help: replace the manual implementation with a derive attribute
+   |
+32 + #[derive(Default)]
+33 ~ pub struct UpdateOptions {
+   |
+
+error: could not compile `orion-syspec` (lib) due to 2 previous errors
+"""
+
+[Job.tasks.result.Ok]
+running_time = 1208334

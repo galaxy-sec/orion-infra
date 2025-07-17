@@ -1,0 +1,48 @@
+[Job]
+name = "flow"
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-18T03:32:00.824973Z"
+stdout = """
+[510] cmd err : 101,   Compiling orion-syspec v0.7.3 (/Users/zuowenjian/devspace/galaxy/orion-syspec)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.20s
+     Running unittests src/lib.rs (target/debug/deps/orion_syspec-a35e7d567077ab81)
+[2025-06-18T03:32:02Z INFO  spec/mod/target] save target  success!:./example/modules/redis_mock/./mod/x86-ubt22-k8s
+[2025-06-18T03:32:02Z INFO  spec/mod/target] save target  success!:./example/modules/redis_mock/./mod/arm-mac14-host
+[2025-06-18T03:32:02Z INFO  spec/local/modprj] save modprj  to ./example/modules/redis_mock success!
+[2025-06-18T03:32:02Z INFO  spec/mod/target] save target  success!:./example/modules/mysql_mock/./mod/arm-mac14-host
+[2025-06-18T03:32:02Z INFO  spec/mod/target] save target  success!:./example/modules/mysql_mock/./mod/x86-ubt22-k8s
+[2025-06-18T03:32:02Z INFO  spec/local/modprj] save modprj  to ./example/modules/mysql_mock success!
+[2025-06-18T03:32:02Z INFO  sys] save sys spec success!:./example/sys-model-spec/example_sys
+[2025-06-18T03:32:02Z INFO  sys] load sys spec success!:./example/sys-model-spec/example_sys
+[2025-06-18T03:32:02Z DEBUG mod/ref] update target success!
+[2025-06-18T03:32:02Z ERROR spec/mod/target] load target failed!:./example/sys-model-spec/example_sys/mods/redis_mock/arm-mac14-host
+[2025-06-18T03:32:02Z ERROR /mod/ref] update mod ref redis_mock fail!
+
+thread 'system::spec::tests::build_example_sys_spec' panicked at /Users/zuowenjian/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/orion-error-0.3.0/src/testcase.rs:31:33:
+[TEST ASSERTION FAILED] update 
+ Error details: [104] res error << No such file or directory (os error 2)
+  -> Want: read workflows
+  -> Context stack:
+context 0: 
+target: read workflows 
+1. key: ./example/sys-model-spec/example_sys/mods/redis_mock/arm-mac14-host/workflows 
+
+context 1: 
+1. workflow: read workflows 
+
+context 2: 
+target: load target mod spec 
+1. root: ./example/sys-model-spec/example_sys/mods/redis_mock/arm-mac14-host 
+
+context 3: 
+1. key: ./example/sys-model-spec/example_sys/mods/redis_mock 
+
+
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+error: test failed, to rerun pass `--lib`
+"""
+
+[Job.tasks.result.Ok]
+running_time = 1913139

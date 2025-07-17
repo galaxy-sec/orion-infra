@@ -1,0 +1,121 @@
+[Job]
+name = "flow"
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-12T10:37:05.215635Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 5230
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-12T10:37:05.220989Z"
+stdout = """
+[510] cmd err : 101,warning: /Users/zuowenjian/devspace/galaxy/orion-syspec/Cargo.toml: unused manifest key: workspace.package.name
+   Compiling orion-syspec v0.6.1 (/Users/zuowenjian/devspace/galaxy/orion-syspec)
+error[E0599]: the method `value_parser` exists for reference `&&&&&&_infer_ValueParser_for<UpdateLevel>`, but its trait bounds were not satisfied
+    --> app/ds-mod/args.rs:47:5
+     |
+47   |     #[arg(value_enum)]
+     |     ^ method cannot be called on `&&&&&&_infer_ValueParser_for<UpdateLevel>` due to unsatisfied trait bounds
+     |
+    ::: /Users/zuowenjian/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/clap_builder-4.5.38/src/builder/value_parser.rs:2439:1
+     |
+2439 | pub struct _infer_ValueParser_for<T>(std::marker::PhantomData<T>);
+     | ------------------------------------ doesn't satisfy `_: _impls_FromStr`
+     |
+    ::: /Users/zuowenjian/devspace/galaxy/orion-syspec/src/types.rs:24:1
+     |
+24   | pub enum UpdateLevel {
+     | -------------------- doesn't satisfy 7 bounds
+     |
+     = note: the following trait bounds were not satisfied:
+             `UpdateLevel: ValueEnum`
+             which is required by `&&&&&_infer_ValueParser_for<UpdateLevel>: clap::builder::impl_prelude::_impls_ValueEnum`
+             `UpdateLevel: ValueParserFactory`
+             which is required by `&&&&&&_infer_ValueParser_for<UpdateLevel>: clap::builder::impl_prelude::_impls_ValueParserFactory`
+             `UpdateLevel: From<OsString>`
+             which is required by `&&&&_infer_ValueParser_for<UpdateLevel>: clap::builder::impl_prelude::_impls_From_OsString`
+             `UpdateLevel: From<&'s std::ffi::OsStr>`
+             which is required by `&&&_infer_ValueParser_for<UpdateLevel>: clap::builder::impl_prelude::_impls_From_OsStr`
+             `UpdateLevel: From<std::string::String>`
+             which is required by `&&_infer_ValueParser_for<UpdateLevel>: clap::builder::impl_prelude::_impls_From_String`
+             `UpdateLevel: From<&'s str>`
+             which is required by `&_infer_ValueParser_for<UpdateLevel>: clap::builder::impl_prelude::_impls_From_str`
+             `UpdateLevel: FromStr`
+             which is required by `_infer_ValueParser_for<UpdateLevel>: clap::builder::impl_prelude::_impls_FromStr`
+     = note: this error originates in the macro `clap::value_parser` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+For more information about this error, try `rustc --explain E0599`.
+error: could not compile `orion-syspec` (bin "ds-mod") due to 2 previous errors
+warning: build failed, waiting for other jobs to finish...
+"""
+
+[Job.tasks.result.Ok]
+running_time = 2385387
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-12T10:37:07.606511Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 5933
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-12T10:37:07.612458Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 3402
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-12T10:37:07.616101Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 2986
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-12T10:37:07.619094Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 3048
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-12T10:37:07.622148Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 3882
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-12T10:37:07.626039Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 12386
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-12T10:37:07.638438Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 28716
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-12T10:37:07.66717Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 51252

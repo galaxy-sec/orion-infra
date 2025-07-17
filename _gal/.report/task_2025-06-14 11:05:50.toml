@@ -1,0 +1,44 @@
+[Job]
+name = "flow"
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-14T11:05:46.082713Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 230937
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-14T11:05:46.313687Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 2618846
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-14T11:05:48.932701Z"
+stdout = """
+[510] cmd err : 101,warning: /Users/zuowenjian/devspace/galaxy/orion-syspec/Cargo.toml: unused manifest key: workspace.package.name
+    Checking orion_common v0.4.1 (/Users/zuowenjian/devspace/galaxy/orion-syspec/crates/orion_common)
+    Checking orion_infra v0.1.0 (/Users/zuowenjian/devspace/galaxy/orion-syspec/crates/orion_infra)
+    Checking orion-syspec v0.6.4 (/Users/zuowenjian/devspace/galaxy/orion-syspec)
+error: method `is_workdir_clean` is never used
+   --> src/addr/git.rs:225:8
+    |
+43  | impl GitAddr {
+    | ------------ method in this implementation
+...
+225 |     fn is_workdir_clean(&self, repo: &Repository) -> Result<bool, git2::Error> {
+    |        ^^^^^^^^^^^^^^^^
+    |
+    = note: `-D dead-code` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(dead_code)]`
+
+error: could not compile `orion-syspec` (lib) due to 1 previous error
+"""
+
+[Job.tasks.result.Ok]
+running_time = 1441881

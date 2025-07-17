@@ -1,0 +1,26 @@
+[Job]
+name = "flow"
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-17T04:33:50.341852Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 167301
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-17T04:33:50.509179Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 2369805
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-17T04:33:52.879005Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 1250487

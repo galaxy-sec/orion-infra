@@ -1,0 +1,38 @@
+[Job]
+name = "flow"
+
+[[Job.tasks]]
+name = "gx.upload"
+target = "./target/release/ds-mod"
+begin = "2025-06-13T06:13:19.634001Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 8519908
+
+[[Job.tasks]]
+name = "gx.upload"
+target = "./version.txt"
+begin = "2025-06-13T06:13:28.155686Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 377976
+
+[[Job.tasks]]
+name = "gx.upload"
+target = "./target/release/ds-sys"
+begin = "2025-06-13T06:13:28.543381Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 9336636
+
+[[Job.tasks]]
+name = "gx.upload"
+target = "./version.txt"
+begin = "2025-06-13T06:13:37.880689Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 378874

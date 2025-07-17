@@ -1,0 +1,94 @@
+[Job]
+name = "flow"
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-18T03:17:52.31566Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 5273
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-18T03:17:52.321095Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 131552
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-18T03:17:52.45276Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 3896
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-18T03:17:52.456672Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 3301
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-18T03:17:52.460202Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 3255
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-18T03:17:52.463467Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 3434
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-18T03:17:52.46691Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 3237
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-18T03:17:52.470155Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 10560
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-18T03:17:52.480727Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 11813
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-18T03:17:52.492551Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 23050
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-18T03:17:52.515709Z"
+stdout = """
+[510] cmd err : 101,    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.09s
+     Running unittests src/lib.rs (target/debug/deps/orion_syspec-0860f1cc0076b7e9)
+error: test failed, to rerun pass `-p orion-syspec --lib`
+"""
+
+[Job.tasks.result.Ok]
+running_time = 3240234

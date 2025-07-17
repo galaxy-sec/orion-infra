@@ -1,0 +1,95 @@
+[Job]
+name = "flow"
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-18T03:17:31.366436Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 4992
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-18T03:17:31.371575Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 2086228
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-18T03:17:33.457955Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 5550
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-18T03:17:33.463522Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 3150
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-18T03:17:33.466846Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 3654
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-18T03:17:33.470509Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 3220
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-18T03:17:33.473736Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 3557
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-18T03:17:33.4773Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 10119
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-18T03:17:33.48743Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 11210
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-18T03:17:33.498665Z"
+stdout = ""
+
+[Job.tasks.result.Ok]
+running_time = 31568
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-18T03:17:33.530361Z"
+stdout = """
+[510] cmd err : 101,   Compiling orion-syspec v0.7.3 (/Users/zuowenjian/devspace/galaxy/orion-syspec)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.73s
+     Running unittests src/lib.rs (target/debug/deps/orion_syspec-0860f1cc0076b7e9)
+error: test failed, to rerun pass `-p orion-syspec --lib`
+"""
+
+[Job.tasks.result.Ok]
+running_time = 5786219

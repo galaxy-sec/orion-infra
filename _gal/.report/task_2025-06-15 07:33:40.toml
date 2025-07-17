@@ -1,0 +1,40 @@
+[Job]
+name = "flow"
+
+[[Job.tasks]]
+name = "gx.cmd"
+begin = "2025-06-15T07:33:40.351925Z"
+stdout = """
+[510] cmd err : 101,warning: /Users/zuowenjian/devspace/galaxy/orion-syspec/Cargo.toml: unused manifest key: workspace.package.name
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.09s
+     Running unittests src/lib.rs (target/debug/deps/orion_syspec-c17f581f5ce6820a)
+[2025-06-15T07:33:40Z INFO  spec/mod/target] save target  success!:./example/modules/postgresql/src/x86-ubt22-k8s
+[2025-06-15T07:33:40Z INFO  spec/mod/target] save target  success!:./example/modules/postgresql/src/arm-mac14-host
+[2025-06-15T07:33:40Z INFO  spec/local/modprj] save modprj  to ./example/mod-ins/mod_cust-prj success!
+[2025-06-15T07:33:40Z INFO  spec/local/modprj] load modprj  to ./example/mod-ins/mod_cust-prj success!
+[2025-06-15T07:33:40Z INFO  spec/addr/local] update ./example/modules/postgresql to ./example/mod-ins/mod_cust-prj/mods/postgresql success!
+[2025-06-15T07:33:40Z DEBUG mod/ref] update target success!
+[2025-06-15T07:33:40Z INFO  spec/mod/target] load target  success!:./example/mod-ins/mod_cust-prj/mods/postgresql/src/x86-ubt22-k8s
+[2025-06-15T07:33:40Z INFO  spec/mod/target] load target  success!:./example/mod-ins/mod_cust-prj/mods/postgresql/src/arm-mac14-host
+[2025-06-15T07:33:40Z INFO  mod/spec] load mod-spec postgresql success!
+[2025-06-15T07:33:40Z INFO  spec/addr/local] update ./example/knowlege/mysql to ./depends/env_res/mysql success!
+[2025-06-15T07:33:40Z INFO  spec] rename ./depends/env_res/mysql to ./depends/env_res/mysql_x86 sucess!
+[2025-06-15T07:33:40Z INFO  spec/addr/local] update ./example/knowlege/mysql to ./depends/env_res/mysql success!
+[2025-06-15T07:33:40Z INFO  spec] rename ./depends/env_res/mysql to ./depends/env_res/mysql_x86 sucess!
+[2025-06-15T07:33:40Z INFO  /mod/ref] update mod ref postgresql success!
+[2025-06-15T07:33:40Z DEBUG spec] pull repo : /Users/zuowenjian/.cache/galaxy/bitnami-common.git
+[2025-06-15T07:33:40Z DEBUG spec] src-path:/Users/zuowenjian/.cache/galaxy/bitnami-common.git
+[2025-06-15T07:33:40Z DEBUG spec] dst-path:./example/mod-ins/mod_cust-prj/env_res
+[2025-06-15T07:33:40Z INFO  addr/git] update https://e.coding.net/dy-sec/galaxy-open/bitnami-common.git to /Users/zuowenjian/.cache/galaxy/bitnami-common.git success!
+[2025-06-15T07:33:40Z INFO  spec] rename ./example/mod-ins/mod_cust-prj/env_res/bitnami-common.git to ./example/mod-ins/mod_cust-prj/env_res/bit-common sucess!
+[2025-06-15T07:33:40Z ERROR spec/mod/] localize mod postgresql fail!
+
+thread 'app_mod::app::tests::test_mod_cust_prj_running' panicked at /Users/zuowenjian/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/orion-error-0.3.0/src/testcase.rs:31:33:
+[TEST ASSERTION FAILED] spec.localize 
+ Error details: [104] res error << No such file or directory (os error 2)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+error: test failed, to rerun pass `--lib`
+"""
+
+[Job.tasks.result.Ok]
+running_time = 408418
