@@ -2,10 +2,12 @@
 name = "orion_infra"
 authors = ["wukong<sec-wukong@outlook.com>"]
 edition = "2024"
-version = "0.2.0"
+version = "0.3.1"
 
 [dependencies]
-orion-error = "0.3"
+#orion-error = "0.3"
+#orion-error = { path = "../orion-error" }
+orion-error = { git = "https://github.com/galaxy-sec/orion-error.git", tag = "v0.5.1" }
 derive_more = { version = "2.0", features = ["full"] }
 thiserror = "~2.0"
 log = "~0.4"
@@ -16,6 +18,7 @@ anyhow = "~1.0"
 scopeguard = "1.2.0"
 # env_logger = "~0.11"
 flexi_logger = "~0.31"
+serde_yaml = "0.9.34"
 #console = "~0.15"
 [dev-dependencies]
 rstest = "0.25"
