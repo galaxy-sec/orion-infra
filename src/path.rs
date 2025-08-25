@@ -42,7 +42,7 @@ pub fn ensure_path<P: AsRef<Path>>(path: P) -> PathResult<P> {
 
 pub fn make_new_path(path: &Path) -> PathResult<()> {
     if path.exists() {
-        return PathReason::Uvs(UvsReason::from_res("path exists".into())).err_result();
+        return PathReason::Uvs(UvsReason::from_res("path exists")).err_result();
     }
     std::fs::create_dir_all(path).owe_sys()?;
     Ok(())

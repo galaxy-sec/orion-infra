@@ -327,8 +327,9 @@ checksum = "42f5e15c9953c5e4ccceeb2e7382a716482c34515315f7b03532b8b4e8393d2d"
 
 [[package]]
 name = "orion-error"
-version = "0.5.1"
-source = "git+https://github.com/galaxy-sec/orion-error.git?tag=v0.5.1#bd7b6323daa2e718a37c07e3e494e92f4bd4eb35"
+version = "0.5.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c3dd8dd8a9b1c17d9f93907d3e3ab67717949d3a0be45d84a5dbe0115d4e5f5e"
 dependencies = [
  "derive-getters",
  "derive_more",
@@ -339,7 +340,7 @@ dependencies = [
 
 [[package]]
 name = "orion_infra"
-version = "0.3.1"
+version = "0.3.2"
 dependencies = [
  "anyhow",
  "derive_more",
