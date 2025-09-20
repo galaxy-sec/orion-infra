@@ -368,7 +368,6 @@ dependencies = [
  "scopeguard",
  "serde",
  "serde_derive",
- "serde_yaml",
  "tempfile",
  "thiserror",
  "toml",

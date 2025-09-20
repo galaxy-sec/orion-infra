@@ -177,10 +177,10 @@ fn get_target(record: &Record, max: usize) -> String {
         ancestors.next();
         ancestors.next();
         ancestors.next();
-        if let Some(prefix) = ancestors.next() {
-            if let Ok(ends) = Path::new(record.target()).strip_prefix(prefix) {
-                target = format!(".../{}", ends.to_str().unwrap_or(""));
-            }
+        if let Some(prefix) = ancestors.next()
+            && let Ok(ends) = Path::new(record.target()).strip_prefix(prefix)
+        {
+            target = format!(".../{}", ends.to_str().unwrap_or(""));
         }
     }
     format!("[{target}]")
