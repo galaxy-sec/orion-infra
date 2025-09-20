@@ -1,2 +1,0 @@
-
-extern mod ver,git,rust { path = "./_gal/mods";  }
