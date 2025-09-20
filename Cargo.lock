@@ -339,6 +339,24 @@ dependencies = [
 ]
 
 [[package]]
+name = "orion-infra"
+version = "0.4.0"
+dependencies = [
+ "anyhow",
+ "derive_more",
+ "flexi_logger",
+ "log",
+ "orion-error",
+ "orion_conf",
+ "rstest",
+ "serde",
+ "serde_derive",
+ "tempfile",
+ "thiserror",
+ "toml",
+]
+
+[[package]]
 name = "orion_conf"
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -350,25 +368,6 @@ dependencies = [
  "serde",
  "serde_derive",
  "serde_yaml",
- "thiserror",
- "toml",
-]
-
-[[package]]
-name = "orion_infra"
-version = "0.4.0"
-dependencies = [
- "anyhow",
- "derive_more",
- "flexi_logger",
- "log",
- "orion-error",
- "orion_conf",
- "rstest",
- "scopeguard",
- "serde",
- "serde_derive",
- "tempfile",
  "thiserror",
  "toml",
 ]
@@ -516,12 +515,6 @@ name = "ryu"
 version = "1.0.20"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "28d3b2b1366ec20994f1fd18c3c594f05c5dd4bc44d8bb0c1c632c8d6829481f"
-
-[[package]]
-name = "scopeguard"
-version = "1.2.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "94143f37725109f92c262ed2cf5e59bce7498c01bcc1502d7b9afe439a4e9f49"
 
 [[package]]
 name = "semver"
