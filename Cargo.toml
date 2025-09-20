@@ -6,6 +6,7 @@ version = "0.3.2"
 
 [dependencies]
 orion-error = "~0.5"
+orion_conf= { version = "~0.3",features = ["yaml", "toml"] }
 #orion-error = { path = "../orion-error" }
 #orion-error = { git = "https://github.com/galaxy-sec/orion-error.git", tag = "v0.5.1" }
 derive_more = { version = "2.0", features = ["full"] }

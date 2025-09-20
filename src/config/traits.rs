@@ -1,4 +1,5 @@
 use log::warn;
+use orion_conf::error::OrionConfResult;
 
 /// 配置标准操作接口
 pub trait ConfigLifecycle {
@@ -21,40 +22,16 @@ pub trait ConfigLifecycle {
     }
 
     /// 强制加载配置文件
-    fn load(path: &str) -> ConfResult<Self>
+    fn load(path: &str) -> OrionConfResult<Self>
     where
         Self: Sized;
 
     /// 初始化配置文件
-    fn init(&self, path: &str) -> ConfResult<()>
+    fn init(&self, path: &str) -> OrionConfResult<()>
     where
         Self: Sized;
 
     /// 安全清理配置文件
-    fn safe_clean(path: &str) -> ConfResult<()>;
-    fn save(&self, path: &str) -> ConfResult<()>;
-}
-
-#[derive(Debug, thiserror::Error)]
-pub enum ConfError {
-    #[error("配置文件加载失败: {0}")]
-    LoadError(String),
-    #[error("配置文件保存失败: {0}")]
-    SaveError(String),
-    #[error("not exists: {0}")]
-    NotExists(String),
-}
-
-pub type ConfResult<T> = Result<T, ConfError>;
-
-impl ConfError {
-    pub fn from_load(e: anyhow::Error) -> Self {
-        Self::LoadError(e.to_string())
-    }
-    pub fn from_save(e: anyhow::Error) -> Self {
-        Self::SaveError(e.to_string())
-    }
-    pub fn not_exists(e: anyhow::Error) -> Self {
-        Self::NotExists(e.to_string())
-    }
+    fn safe_clean(path: &str) -> OrionConfResult<()>;
+    fn save(&self, path: &str) -> OrionConfResult<()>;
 }

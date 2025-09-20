@@ -1,36 +1,27 @@
-use crate::{config::conf_utils::backup_clean, traits::TomlStore, types::AnyResult};
+use std::path::Path;
 
-use super::{
-    ConfigLifecycle,
-    conf_utils::{import_from_toml, save_toml_config},
-    traits::{ConfError, ConfResult},
+use orion_conf::{
+    TomlIO,
+    error::{ConfIOReason, OrionConfResult},
 };
+use orion_error::StructError;
 
-impl<T> TomlStore for T
-where
-    T: serde::Serialize + serde::de::DeserializeOwned,
-{
-    fn from_toml(path: &str) -> AnyResult<Self> {
-        import_from_toml::<T>(path)
-    }
-    fn save_toml(&self, path: &str, cover: bool) -> AnyResult<()> {
-        save_toml_config(self, path, cover)
-        //self.save_toml(path, cover)
-    }
-}
+use crate::config::backup_clean;
 
-impl<T: TomlStore> ConfigLifecycle for T
+use super::ConfigLifecycle;
+
+impl<T> ConfigLifecycle for T
 where
-    T: serde::Serialize + serde::de::DeserializeOwned,
+    T: TomlIO<T> + serde::Serialize + serde::de::DeserializeOwned,
 {
-    fn load(path: &str) -> ConfResult<Self>
+    fn load(path: &str) -> OrionConfResult<Self>
     where
         Self: Sized,
     {
-        Self::from_toml(path).map_err(ConfError::from_load)
+        T::load_toml(Path::new(path))
     }
 
-    fn init(&self, path: &str) -> ConfResult<()>
+    fn init(&self, path: &str) -> OrionConfResult<()>
     where
         Self: Sized,
     {
@@ -38,11 +29,11 @@ where
         self.save(path)
     }
 
-    fn safe_clean(path: &str) -> ConfResult<()> {
-        backup_clean(path).map_err(ConfError::not_exists)
+    fn safe_clean(path: &str) -> OrionConfResult<()> {
+        backup_clean(path).map_err(|err| StructError::from(ConfIOReason::Other(err.to_string())))
     }
 
-    fn save(&self, path: &str) -> ConfResult<()> {
-        self.save_toml(path, true).map_err(ConfError::from_save)
+    fn save(&self, path: &str) -> OrionConfResult<()> {
+        self.save_toml(Path::new(path))
     }
 }
