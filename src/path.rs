@@ -1,11 +1,8 @@
 use derive_more::From;
-use orion_error::{
-    ErrorCode, ErrorOwe, ErrorWith, StructError, ToStructError, UvsReason, UvsResFrom,
-};
-use serde::Serialize;
+use orion_error::{ErrorCode, ErrorOwe, ErrorWith, StructError, ToStructError, UvsFrom, UvsReason};
 use std::{fs, path::Path};
 use thiserror::Error;
-#[derive(Clone, Debug, Serialize, PartialEq, Error, From)]
+#[derive(Clone, Debug, PartialEq, Error, From)]
 pub enum PathReason {
     #[error("brief {0}")]
     Brief(String),
@@ -42,7 +39,10 @@ pub fn ensure_path<P: AsRef<Path>>(path: P) -> PathResult<P> {
 
 pub fn make_new_path(path: &Path) -> PathResult<()> {
     if path.exists() {
-        return PathReason::Uvs(UvsReason::from_res("path exists")).err_result();
+        return PathReason::from_res()
+            .err_result()
+            .want("path exists")
+            .with(path);
     }
     std::fs::create_dir_all(path).owe_sys()?;
     Ok(())

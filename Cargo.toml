@@ -2,25 +2,26 @@
 name = "orion-infra"
 authors = ["wukong<sec-wukong@outlook.com>"]
 edition = "2024"
-version = "0.4.0"
 description = "orion infra "
 license = "MIT"
 repository = "https://github.com/galaxy-sec/orion-infra"
 keywords = ["logconf" ]
 categories = ["config"]
 
+version = "0.5.0"
 [dependencies]
-orion-error = "~0.5"
-orion_conf= { version = "~0.3",features = ["yaml", "toml"] }
+orion-error = "0.6"
 derive_more = { version = "2.0", features = ["full"] }
-thiserror = "~2.0"
-log = "~0.4"
-toml = "~0.9"
-serde = "~1.0"
-serde_derive = "~1.0"
-anyhow = "~1.0"
+orion_conf= { version = "0.5",features = ["yaml", "toml"] }
+thiserror = "2.0"
+log = "0.4"
+toml = "0.9"
+serde = "1.0"
+serde_derive = "1.0"
+anyhow = "1.0"
+scopeguard = "1.2"
 # env_logger = "~0.11"
-flexi_logger = "~0.31"
+flexi_logger = "0.31"
 #console = "~0.15"
 [dev-dependencies]
 rstest = "0.25"
